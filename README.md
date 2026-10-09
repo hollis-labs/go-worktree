@@ -1,5 +1,22 @@
 # go-worktree
 
+## Maintenance moved to `github.com/hollis-labs/libs/util`
+
+This standalone repository is retired. Maintained source and documentation are
+in [github.com/hollis-labs/libs/util/worktree](https://github.com/hollis-labs/libs/tree/util%2Fv0.1.0/util/worktree), released in **`util/v0.1.0`**.
+Install the replacement module:
+
+```sh
+go get github.com/hollis-labs/libs/util@v0.1.0
+```
+
+Replace the `github.com/hollis-labs/go-worktree` import prefix with
+`github.com/hollis-labs/libs/util/worktree`, retaining the package subpath. Review the replacement documentation
+for any API changes before migrating. Existing standalone tags and history remain
+available; old module pins do not automatically redirect to the new module.
+
+The documentation below describes historical standalone usage.
+
 Create, inspect, safely remove and sweep per-run git worktrees with injected policy.
 
 It manages the `git worktree` lifecycle for tools that give each agent run, worker session or job its own checkout. Where the checkout goes, which commit it starts from, what the branch is called and what a sweep may reap are all supplied by the caller. What is not negotiable is the default: **removal preserves work**.
